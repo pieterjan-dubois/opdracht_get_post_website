@@ -1,0 +1,280 @@
+body {
+    background-color: white;
+
+    line-height: 1.4;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.titels {
+    font-family: serif;
+}
+
+.wrapper {
+    display: grid;
+}
+
+/* banner */
+.banner-main {
+    display: grid;
+    background-color: black;
+
+}
+
+
+/* navigatiebalk */
+nav.container {
+
+    padding: 5px 0px;
+    text-align: center;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+/* Inhoud van navigatiebalk */
+nav.container a {
+    color: #FFF;
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 5px 30px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+/* tekst van navigatiebalk */
+nav.container ul {
+    display: grid;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+/* Border from Y to X  */
+/* animaties */
+nav.borderYtoX a:before,
+nav.borderYtoX a:after {
+    position: absolute;
+    width: 0px;
+    content: "";
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+.sectie {
+    display: grid;
+}
+
+nav.borderYtoX a:before {
+    left: 0px;
+    top: 0px;
+}
+
+nav.borderYtoX a:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+nav.borderYtoX a:hover:before,
+nav.borderYtoX a:hover:after {
+    height: 2px;
+    width: 100%;
+}
+
+nav.borderYtoX a.selected {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+
+}
+
+
+.slogan {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    letter-spacing: 3px;
+    font-size: 2cm;
+    font-weight: 700;
+    text-shadow: 3px 0 0 #fff;
+}
+
+input[type=text],
+select {
+    margin-left:2rem;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: grey;
+}
+
+.formulier {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#invoice-POS {
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    padding: 2mm;
+    margin: 0 auto;
+    width: 70em;
+    background: #FFF;
+
+}
+
+::selection {
+    background: #f31544;
+    color: #FFF;
+}
+
+moz-selection {
+    background: #f31544;
+    color: #FFF;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #222;
+}
+
+h2 {
+    font-size: .9em;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 2em;
+}
+
+p {
+    font-size: .7em;
+    color: #666;
+    line-height: 1.2em;
+}
+
+#top,
+#mid,
+#bot {
+    /* Targets all id with 'col-' */
+    border-bottom: 1px solid #EEE;
+}
+
+#top {
+    min-height: 150px;
+}
+
+#mid {
+    min-height: 100px;
+}
+
+#bot {
+    min-height: 50px;
+}
+
+#top .logo {
+
+    height: 60px;
+    width: 60px;
+    background: url(http://michaeltruong.ca/images/logo1.png) no-repeat;
+    background-size: 60px 60px;
+}
+
+.clientlogo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
+    background-size: 60px 60px;
+    border-radius: 50px;
+}
+
+.info {
+    display: block;
+
+    margin-left: 0;
+}
+
+.title {
+    float: right;
+}
+
+.title p {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {}
+
+.tabletitle {
+
+    font-size: .5em;
+    background: #EEE;
+}
+
+.service {
+    border-bottom: 1px solid #EEE;
+}
+
+.item {
+    width: 24mm;
+}
+
+.itemtext {
+    font-size: .5em;
+}
+
+#legalcopy {
+    margin-top: 5mm;
+}
+
+@media(max-width:700px) {
+    .pony {
+        object-fit: contain;
+        text-align: center;
+
+    }
+
+    .nav.container ul {
+        grid-template-columns: 1fr;
+    }
+    .sectie{
+        grid-template-columns: 1fr;
+    }
+
+    input[type=submit] {
+        width: 50%;
+    }
+
+    .slogan {
+        top: 48%;
+    }
+
+}
